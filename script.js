@@ -10,21 +10,43 @@
 //7. Return password to the user. (alert or written to page)
 
 
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+//  //Assignment Code
+// var generateBtn = document.querySelector("#generate");
 
-
-// seperate arrays, or object storing the arr
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+//password object
+var password = {
+  length: '',
+  upper:  '',
+  lower: '',
+  num: '',
+  spec: ''
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+password.length = prompt('How long would you like your password to be?');
+console.log('Length is: ', password.length);
+
+password.upper = prompt('Would you like uppercase letters in your password? (Press "ok" for yes)');
+console.log('Uppercase?: ', password.upper);
+
+password.lower = prompt('Would you like lowercase letters in your password? (Press "ok" for yes)');
+console.log('Lowercase?: ', password.lower);
+
+password.num = prompt('Would you like numerical values in your password? (Press "ok" for yes)');
+console.log('Numerical?: ', password.num);
+
+password.spec = prompt('Would you like special characters in your password? (Press "ok" for yes)');
+console.log('Special?: ', password.spec);
+
+
+
+// // Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+
+// }
+
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
