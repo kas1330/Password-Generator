@@ -10,8 +10,8 @@
 //7. Return password to the user. (alert or written to page)
 
 
-//  //Assignment Code
-// var generateBtn = document.querySelector("#generate");
+  //Assignment Code
+var generateBtn = document.querySelector("#generate");
 
 //password object
 var passwordObj = {
@@ -70,6 +70,17 @@ if(passwordObj.spec != null){
   var specString = '!@#$%^&*()-+=<>';
   passwordString += specString;
   console.log('Full password string is: ', passwordString);
+}
+
+function generatePassword(){
+  var passLength = parseInt(passwordObj.length);
+  console.log('Passlength ', passLength);
+  for (var i = 0; i < passLength; i++) {
+    
+    
+  }
+  
+ 
 }
 
 
