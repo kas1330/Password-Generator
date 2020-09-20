@@ -22,8 +22,17 @@ var password = {
   spec: ''
 }
 
-password.length = prompt('How long would you like your password to be?');
+var passwordArr = [];
+console.log('PasswordArr = ', passwordArr);
+
+password.length = prompt('How long would you like your password to be? (Must be between 8 and 128 characters)');
 console.log('Length is: ', password.length);
+while(password.length < 8 || password.length > 128){
+  password.length = prompt('How long would you like your password to be? (Must be between 8 and 128 characters)');
+  console.log('Length is: ', password.length);
+}
+
+
 
 password.upper = prompt('Would you like uppercase letters in your password? (Press "ok" for yes)');
 console.log('Uppercase?: ', password.upper);
@@ -36,6 +45,8 @@ console.log('Numerical?: ', password.num);
 
 password.spec = prompt('Would you like special characters in your password? (Press "ok" for yes)');
 console.log('Special?: ', password.spec);
+
+
 
 
 
