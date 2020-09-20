@@ -88,11 +88,7 @@ function generatePassword(){
  }
 
 
-
-
-
-
-// // Write password to the #password input
+ // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   console.log(password);
