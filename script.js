@@ -75,13 +75,17 @@ if(passwordObj.spec != null){
 function generatePassword(){
   var passLength = parseInt(passwordObj.length);
   console.log('Passlength ', passLength);
+  var pass = '';
   for (var i = 0; i < passLength; i++) {
     
-    
+    console.log('Your in a for loop, congrats!');
+    var rand = Math.floor(Math.random() * passwordString.length + 1); 
+    // console.log('Random password: ', rand);
+    pass += passwordString.charAt(rand);
+    console.log('Random password: ', pass);
   }
-  
- 
-}
+  return pass;
+ }
 
 
 
@@ -89,13 +93,12 @@ function generatePassword(){
 
 
 // // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
+function writePassword() {
+  var password = generatePassword();
+  console.log(password);
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
 
 // // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+ generateBtn.addEventListener("click", writePassword);
