@@ -10,4 +10,4 @@ A random password generator based on the criteria you select
 7. use charAt and your randomly picked index to pick each character of the password.
 8. returned the full password.
 9. Uncommented out the original given code.
-
+10. Commented out all the console.log().
