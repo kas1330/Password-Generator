@@ -11,3 +11,4 @@ A random password generator based on the criteria you select
 8. returned the full password.
 9. Uncommented out the original given code.
 10. Commented out all the console.log().
+11. Used a regular expression to determine if the user prompt for length returned anything non numeric.
