@@ -28,14 +28,14 @@ var passwordString = '';
 
 //Prompts to the user
 passwordObj.length = prompt('How long would you like your password to be? (Must be between 8 and 128 characters)');
-// console.log('Length is: ', passwordObj.length);
-var isANum = /^[a-zA-Z]+$/;
+console.log('Length is: ', passwordObj.length);
+var isANum = /^[0-9]+$/;
 var valueCheck = passwordObj.length;
-var res = valuecheck.match(isANum);
+var res = valueCheck.match(isANum);
 console.log("The result is: ", res);
-while(passwordObj.length < 8 || passwordObj.length > 128){
+while(passwordObj.length < 8 || passwordObj.length > 128 || res === null){
   passwordObj.length = prompt('How long would you like your password to be? (Must be between 8 and 128 characters)');
-  // console.log('Length is: ', passwordObj.length);
+  console.log('Length is: ', passwordObj.length);
 }
 
 passwordObj.upper = prompt('Would you like uppercase letters in your password? (Press "ok" for yes)');
