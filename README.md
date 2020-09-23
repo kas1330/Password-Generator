@@ -15,3 +15,4 @@ A random password generator based on the criteria you select
 12. Just noticed that the prompts happen without pushing the generate password button, and the generate password
     button must be pressed in order for the password to be written to the screen, this is how the code given by
     the assignment operates.
+13. Moved while loop and prompts inside generate password.

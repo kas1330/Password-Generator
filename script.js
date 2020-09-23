@@ -26,9 +26,7 @@ var passwordObj = {
 var passwordString = '';
 // console.log('PasswordString = ', passwordString);
 
-//Prompts to the user
-passwordObj.length = prompt('How long would you like your password to be? (Must be between 8 and 128 characters)');
-// console.log('Length is: ', passwordObj.length);
+
 
 //Use regular expression to determine if there is a non numeric char in this user answer.
 var isANum = /^[0-9]+$/;
@@ -36,26 +34,8 @@ var valueCheck = passwordObj.length;
 var res = valueCheck.match(isANum);
 // console.log("The result is: ", res);
 
-while(passwordObj.length < 8 || passwordObj.length > 128 || res === null){
-  passwordObj.length = prompt('How long would you like your password to be? (Must be between 8 and 128 characters)');
-  // console.log('Length is: ', passwordObj.length);
-  if(passwordObj.length >= 8 || passwordObj.length <=128){
-    //This just makes res equal to something that is not null.
-    res = 1;
-  }
-}
 
-passwordObj.upper = prompt('Would you like uppercase letters in your password? (Press "ok" for yes)');
-// console.log('Uppercase?: ', passwordObj.upper);
 
-passwordObj.lower = prompt('Would you like lowercase letters in your password? (Press "ok" for yes)');
-// console.log('Lowercase?: ', passwordObj.lower);
-
-passwordObj.num = prompt('Would you like numerical values in your password? (Press "ok" for yes)');
-// console.log('Numerical?: ', passwordObj.num);
-
-passwordObj.spec = prompt('Would you like special characters in your password? (Press "ok" for yes)');
-// console.log('Special?: ', passwordObj.spec);
 
 
 //Create a string with all the characters that the user wants.
@@ -84,6 +64,28 @@ if(passwordObj.spec != null){
 }
 
 function generatePassword(){
+
+  while(passwordObj.length < 8 || passwordObj.length > 128 || res === null){
+    passwordObj.length = prompt('How long would you like your password to be? (Must be between 8 and 128 characters)');
+    // console.log('Length is: ', passwordObj.length);
+    if(passwordObj.length >= 8 || passwordObj.length <=128){
+      //This just makes res equal to something that is not null.
+      res = 1;
+    }
+  }
+
+  passwordObj.upper = prompt('Would you like uppercase letters in your password? (Press "ok" for yes)');
+  // console.log('Uppercase?: ', passwordObj.upper);
+  
+  passwordObj.lower = prompt('Would you like lowercase letters in your password? (Press "ok" for yes)');
+  // console.log('Lowercase?: ', passwordObj.lower);
+  
+  passwordObj.num = prompt('Would you like numerical values in your password? (Press "ok" for yes)');
+  // console.log('Numerical?: ', passwordObj.num);
+  
+  passwordObj.spec = prompt('Would you like special characters in your password? (Press "ok" for yes)');
+  // console.log('Special?: ', passwordObj.spec);
+  
   var passLength = parseInt(passwordObj.length);
   // console.log('Passlength ', passLength);
   var pass = '';
@@ -103,6 +105,16 @@ function writePassword() {
   // console.log(password);
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
+
+  var passwordObj = {
+    length: '',
+    upper:  '',
+    lower: '',
+    num: '',
+    spec: ''
+  }
+  
+  res = null;
 }
 
 // // Add event listener to generate button
