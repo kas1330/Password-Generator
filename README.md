@@ -14,6 +14,6 @@ A random password generator based on the criteria you select
 11. Used a regular expression to determine if the user prompt for length returned anything non numeric.
 12. Just noticed that the prompts happen without pushing the generate password button, and the generate password
     button must be pressed in order for the password to be written to the screen, this is how the code given by
-    the assignment operates.
+    the assignment operates. <--Fixed this below. 9/22/2020
 13. Moved while loop and prompts inside generate password.
 14. Reset values of object as well as res back to the default in the writePassword() function.
