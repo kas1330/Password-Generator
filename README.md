@@ -16,3 +16,4 @@ A random password generator based on the criteria you select
     button must be pressed in order for the password to be written to the screen, this is how the code given by
     the assignment operates.
 13. Moved while loop and prompts inside generate password.
+14. Reset values of object as well as res back to the default in the writePassword() function.

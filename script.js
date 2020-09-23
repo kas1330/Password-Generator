@@ -35,9 +35,6 @@ var res = valueCheck.match(isANum);
 // console.log("The result is: ", res);
 
 
-
-
-
 //Create a string with all the characters that the user wants.
 if(passwordObj.upper != null){
   var upperString = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
